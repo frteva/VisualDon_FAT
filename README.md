@@ -24,4 +24,13 @@ Les données se séparent en différentes colonnes et sont de différents types,
 
 • Missions_Status représente si la mission est réussite ou échouée
 
-VisualDon_Fat, ce n'est pas qu'une visualisation de données, c'est une expérience inoubliable, un moment de contemplation unique dans cet univers perdu d'avance.
+
+## But
+
+Notre but est d'apercevoir les différentes missions ayant eu lieu depuis 1957. Nous voulons le présenter avec le décollage d'une fusée qui affiche des informations à chaque détachement des étages de la fusée. 
+
+## Références
+
+Le site de référence [nextspaceflight.com]("https://nextspaceflight.com/") utilise ces données.
+
+
