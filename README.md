@@ -1,4 +1,5 @@
-# VisualDon_FAT
+# Space Missions Launches All the space missions since 1957.
+Groupe FAT
 
 ## Thématique
 
@@ -31,6 +32,11 @@ Notre but est d'apercevoir les différentes missions ayant eu lieu depuis 1957. 
 
 ## Références
 
-Le site de référence [nextspaceflight.com]("https://nextspaceflight.com/") utilise ces données.
+- Example d'utilisation des données sur kaggle : https://www.kaggle.com/code/salmane/space-missions-analysis
+- Les données scrapées proviennent du site https://nextspaceflight.com/
+- Visualisation similaire pour les satellites: https://www.wsj.com/graphics/new-space-race/
 
+### Inspirations
 
+- Pour l'idée d'une carte qui présente le lieu des départs dans le temps : https://www.youtube.com/watch?v=LLCF7vPanrY
+- Une progression des données dans le temps https://observablehq.com/@d3/bar-chart-race
