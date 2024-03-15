@@ -1,0 +1,17 @@
+:root {
+    --background-color: #0a1d3e;
+    --light-grey-color-solid: #d4d4d4;
+    --light-grey-color: rgba(0,0,0,0.15);
+    --primary-text-color: #4C4C4C;
+    --secondary-text-color: #888888;
+    --frame-color: #242424;
+    --frame-bg-color: #f1f1f1;
+    --accent-color: #76e4ff;
+    --background-noise: url("/assets/noise-light.png");
+
+    --text-highlight: rgba(134, 92, 176, 0.25);
+
+    --big-text: 1.5rem;
+    --small-text: 1rem;
+    --side-gap: 20px;
+}
