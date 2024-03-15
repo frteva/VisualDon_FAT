@@ -40,3 +40,10 @@ Notre but est d'apercevoir les différentes missions ayant eu lieu depuis 1957. 
 
 - Pour l'idée d'une carte qui présente le lieu des départs dans le temps : https://www.youtube.com/watch?v=LLCF7vPanrY
 - Une progression des données dans le temps https://observablehq.com/@d3/bar-chart-race
+
+# Wireframe 
+
+
+![Desktop](https://github.com/frteva/VisualDon_FAT/assets/115493754/196833bc-4113-4445-86b6-45cb68612d60)
+
+URL vers notre Wireframe sur Figma: https://www.figma.com/file/FSNFOBLTynCvf21V7rfXkf/Wireframe?type=design&node-id=2-2&mode=design&t=BfpfbgsG0ww21Fpi-0
