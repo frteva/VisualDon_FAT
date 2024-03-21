@@ -12,10 +12,32 @@ import CompaniesByYear from "../components/CompaniesByYear.astro"
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<CompaniesByYear/>
-		<div>
-			<h1>Hello World</h1>
-		</div>
+		<main>
+			<div class="rocket">
+				<img src="/assets/1st-stage.svg" alt="">
+				<img src="/assets/2st-stage.svg" alt="">
+				<img src="/assets/3st-stage.svg" alt="">
+				<img src="/assets/lunar.svg" alt="">
+			</div>
+			<h1 class="big-text">Astro Boy</h1>
+			<section>
+				<CompaniesByYear/>
+			</section>
+			<section>
+				<p>Welcome</p>
+			</section>
+
+		</main>
 	</body>
 </html>
+
+<style>
+	.rocket {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+	.rocket ig {
+		width: 100%;
+	}
+</style>
