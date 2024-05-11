@@ -1,0 +1,354 @@
+[
+  {
+    "positions": "Jiuquan Satellite Launch Center, China",
+    "launches": 103,
+    "lon": 100.2838214916303,
+    "lat": 40.964989,
+    "timezone_name": "Asia/Shanghai",
+    "offset": "+08:00"
+  },
+  {
+    "positions": "Kennedy Space Center, Florida, USA",
+    "launches": 176,
+    "lon": -80.68185579912377,
+    "lat": 28.524279550000003,
+    "timezone_name": "America/New_York",
+    "offset": "-05:00"
+  },
+  {
+    "positions": "Boca Chica, Texas, USA",
+    "launches": 1,
+    "lon": -97.1823793,
+    "lat": 25.9922919,
+    "timezone_name": "America/Chicago",
+    "offset": "-06:00"
+  },
+  {
+    "positions": "Baikonur Cosmodrome, Kazakhstan",
+    "launches": 701,
+    "lon": 51.919288,
+    "lat": 47.138485,
+    "timezone_name": "Asia/Atyrau",
+    "offset": "+05:00"
+  },
+  {
+    "positions": "Cape Canaveral AFS, Florida, USA",
+    "launches": 658,
+    "lon": -80.54345371389509,
+    "lat": 28.46035945,
+    "timezone_name": "America/New_York",
+    "offset": "-05:00"
+  },
+  {
+    "positions": "Taiyuan Satellite Launch Center, China",
+    "launches": 46,
+    "lon": 100.2838214916303,
+    "lat": 40.964989,
+    "timezone_name": "Asia/Shanghai",
+    "offset": "+08:00"
+  },
+  {
+    "positions": "Wenchang Satellite Launch Center, China",
+    "launches": 8,
+    "lon": 100.2838214916303,
+    "lat": 40.964989,
+    "timezone_name": "Asia/Shanghai",
+    "offset": "+08:00"
+  },
+  {
+    "positions": "Tanegashima Space Center, Japan",
+    "launches": 85,
+    "lon": 130.957706,
+    "lat": 30.377712,
+    "timezone_name": "Asia/Tokyo",
+    "offset": "+09:00"
+  },
+  {
+    "positions": "Wallops Flight Facility, Virginia, USA",
+    "launches": 31,
+    "lon": -75.45454,
+    "lat": 37.876245,
+    "timezone_name": "America/New_York",
+    "offset": "-05:00"
+  },
+  {
+    "positions": "Xichang Satellite Launch Center, China",
+    "launches": 102,
+    "lon": 102.02793799844264,
+    "lat": 28.24576155,
+    "timezone_name": "Asia/Shanghai",
+    "offset": "+08:00"
+  },
+  {
+    "positions": "Palmachim Airbase, Israel",
+    "launches": 11,
+    "lon": 34.70596,
+    "lat": 31.93334,
+    "timezone_name": "Asia/Jerusalem",
+    "offset": "+02:00"
+  },
+  {
+    "positions": "M?hia Peninsula, New Zealand",
+    "launches": 13,
+    "lon": 175.320008,
+    "lat": -38.828158,
+    "timezone_name": "Pacific/Auckland",
+    "offset": "+12:00"
+  },
+  {
+    "positions": "China",
+    "launches": 9,
+    "lon": 104.999927,
+    "lat": 35.000074,
+    "timezone_name": "Asia/Shanghai",
+    "offset": "+08:00"
+  },
+  {
+    "positions": "Mojave Air and Space Port, California, USA",
+    "launches": 1,
+    "lon": -99.307306,
+    "lat": 35.2044968,
+    "timezone_name": "America/Chicago",
+    "offset": "-06:00"
+  },
+  {
+    "positions": "Plesetsk Cosmodrome, Russia",
+    "launches": 1263,
+    "lon": 40.29281,
+    "lat": 62.72083,
+    "timezone_name": "Europe/Moscow",
+    "offset": "+03:00"
+  },
+  {
+    "positions": "Shahrud Missile Test Site",
+    "launches": 1,
+    "lon": 167.737720473602,
+    "lat": 8.725099799999999,
+    "timezone_name": "Pacific/Kwajalein",
+    "offset": "+12:00"
+  },
+  {
+    "positions": "Guiana Space Centre, French Guiana, France",
+    "launches": 299,
+    "lon": -52.810785,
+    "lat": 5.268098,
+    "timezone_name": "America/Cayenne",
+    "offset": "-03:00"
+  },
+  {
+    "positions": "Semnan Space Center, Iran",
+    "launches": 13,
+    "lon": 53.897056783100155,
+    "lat": 35.221533550000004,
+    "timezone_name": "Asia/Tehran",
+    "offset": "+03:30"
+  },
+  {
+    "positions": "Satish Dhawan Space Centre, India",
+    "launches": 76,
+    "lon": 80.22564247856761,
+    "lat": 13.6280508,
+    "timezone_name": "Asia/Kolkata",
+    "offset": "+05:30"
+  },
+  {
+    "positions": "West Texas, Texas, USA",
+    "launches": 12,
+    "lon": -96.859032,
+    "lat": 32.789255,
+    "timezone_name": "America/Chicago",
+    "offset": "-06:00"
+  },
+  {
+    "positions": "Spaceport America, New Mexico",
+    "launches": 4,
+    "lon": -106.97213822973316,
+    "lat": 32.9902899,
+    "timezone_name": "America/Denver",
+    "offset": "-07:00"
+  },
+  {
+    "positions": "Vostochny Cosmodrome, Russia",
+    "launches": 5,
+    "lon": 128.34513791632537,
+    "lat": 51.85318155,
+    "timezone_name": "Asia/Yakutsk",
+    "offset": "+09:00"
+  },
+  {
+    "positions": "Vandenberg AFB, California, USA",
+    "launches": 442,
+    "lon": -120.5168626256525,
+    "lat": 34.751477550000004,
+    "timezone_name": "America/Los_Angeles",
+    "offset": "-08:00"
+  },
+  {
+    "positions": "Yellow Sea",
+    "launches": 1,
+    "lon": 123.9999998,
+    "lat": 36.0000002,
+    "timezone_name": "Etc/GMT-8",
+    "offset": "+08:00"
+  },
+  {
+    "positions": "Uchinoura Space Center, Japan",
+    "launches": 34,
+    "lon": 131.07961777525216,
+    "lat": 31.254078200000002,
+    "timezone_name": "Asia/Tokyo",
+    "offset": "+09:00"
+  },
+  {
+    "positions": "Japan",
+    "launches": 7,
+    "lon": 139.2394179,
+    "lat": 36.5748441,
+    "timezone_name": "Asia/Tokyo",
+    "offset": "+09:00"
+  },
+  {
+    "positions": "Sohae Satellite Launching Station, North Korea",
+    "launches": 3,
+    "lon": 124.7059179,
+    "lat": 39.6598574,
+    "timezone_name": "Asia/Pyongyang",
+    "offset": "+09:00"
+  },
+  {
+    "positions": "Kauai, Pacific Missile Range Facility",
+    "launches": 1,
+    "lon": -159.7846070550674,
+    "lat": 22.02596465,
+    "timezone_name": "Pacific/Honolulu",
+    "offset": "-10:00"
+  },
+  {
+    "positions": "Yasny Cosmodrome, Russia",
+    "launches": 10,
+    "lon": 31.1047,
+    "lat": 57.67,
+    "timezone_name": "Europe/Moscow",
+    "offset": "+03:00"
+  },
+  {
+    "positions": "Kiritimati Launch Area, Pacific Ocean",
+    "launches": 36,
+    "lon": -157.42756,
+    "lat": 1.87421,
+    "timezone_name": "Pacific/Kiritimati",
+    "offset": "+14:00"
+  },
+  {
+    "positions": "Naro Space Center, South Korea",
+    "launches": 3,
+    "lon": 127.36825967482427,
+    "lat": 36.3869282,
+    "timezone_name": "Asia/Seoul",
+    "offset": "+09:00"
+  },
+  {
+    "positions": "Pacific Spaceport Complex, Alaska, USA",
+    "launches": 3,
+    "lon": -152.354501,
+    "lat": 57.440798,
+    "timezone_name": "America/Anchorage",
+    "offset": "-09:00"
+  },
+  {
+    "positions": "Tonghae Satellite Launching Ground, North Korea",
+    "launches": 2,
+    "lon": 129.66121799616445,
+    "lat": 40.8563179,
+    "timezone_name": "Asia/Pyongyang",
+    "offset": "+09:00"
+  },
+  {
+    "positions": "Russia",
+    "launches": 5,
+    "lon": 97.7453061,
+    "lat": 64.6863136,
+    "timezone_name": "Asia/Krasnoyarsk",
+    "offset": "+07:00"
+  },
+  {
+    "positions": "Kapustin Yar, Russia",
+    "launches": 112,
+    "lon": 45.766895,
+    "lat": 48.575634,
+    "timezone_name": "Europe/Astrakhan",
+    "offset": "+04:00"
+  },
+  {
+    "positions": "Base Aerea de Gando, Gran Canaria",
+    "launches": 2,
+    "lon": -5.603696193600097,
+    "lat": 37.167743599999994,
+    "timezone_name": "Europe/Madrid",
+    "offset": "+01:00"
+  },
+  {
+    "positions": "Edwards AFB, California, USA",
+    "launches": 5,
+    "lon": -117.936455,
+    "lat": 34.925806,
+    "timezone_name": "America/Los_Angeles",
+    "offset": "-08:00"
+  },
+  {
+    "positions": "San Marco Launch Platform, Kenya",
+    "launches": 9,
+    "lon": 36.825445,
+    "lat": -1.29208,
+    "timezone_name": "Africa/Nairobi",
+    "offset": "+03:00"
+  },
+  {
+    "positions": "Naval Air Station Point Mugu, California, USA",
+    "launches": 6,
+    "lon": -119.1180462563502,
+    "lat": 34.1141518,
+    "timezone_name": "America/Los_Angeles",
+    "offset": "-08:00"
+  },
+  {
+    "positions": "Ronald Reagan Ballistic Missile Defense Test Site, Marshall Islands, USA",
+    "launches": 9,
+    "lon": 171.237308,
+    "lat": 8.710837,
+    "timezone_name": "Pacific/Majuro",
+    "offset": "+12:00"
+  },
+  {
+    "positions": "Barents Sea Launch Area, Barents Sea",
+    "launches": 3,
+    "lon": 34.2,
+    "lat": 69.5,
+    "timezone_name": "Etc/GMT-2",
+    "offset": "+02:00"
+  },
+  {
+    "positions": "Alcântara Launch Center, Maranhão, Brazil",
+    "launches": 3,
+    "lon": -44.415343208470944,
+    "lat": -2.323380197367561,
+    "timezone_name": "America/Fortaleza",
+    "offset": "-03:00"
+  },
+  {
+    "positions": "RAAF Woomera Range Complex, Australia",
+    "launches": 6,
+    "lon": 136.80568440737287,
+    "lat": -31.145342790597848,
+    "timezone_name": "Australia/Adelaide",
+    "offset": "+09:30"
+  },
+  {
+    "positions": "Hammaguir, Algeria, France",
+    "launches": 4,
+    "lon": -3.037262830366406,
+    "lat": 30.883694506507112,
+    "timezone_name": "Africa/Algiers",
+    "offset": "+01:00"
+  }
+]

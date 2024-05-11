@@ -1,0 +1,77 @@
+---
+
+---
+
+<div id="container2"></div>
+
+<style>
+  #container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :global(svg) {
+    /* background-color: rgba(141, 196, 235, 0.5); */
+  }
+</style>
+
+<script>
+  // importations ------------------------------------------------------------------------------------------------------------------------------------------
+  import * as d3 from "d3";
+  import { select } from "d3-selection";
+  import { geoMercator, geoPath } from "d3-geo";
+  import { json } from "d3-fetch";
+  import { defineCollection } from "astro:content";
+
+  // gestion des datas -------------------------------------------------------------------------------------------------------------------------------------
+  const heuresLancements = await d3.json("/assets/data/heures_lancements.json");
+  const missionLaunches = await d3.json("assets/data/mission_launches.json");
+  const positions = await d3.json("assets/data/positions.json");
+
+  console.log(heuresLancements);
+  console.log(missionLaunches);
+  console.log(positions);
+
+  const margin = 40,
+    width = 900,
+    height = 900;
+
+  const map = select("#container2")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g");
+  /* .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); */
+
+  const projection = geoMercator()
+    .scale(140)
+    .center([0, 20])
+    .translate([width / 2, height / 2]);
+
+  const path = geoPath().projection(projection);
+
+  json(
+    "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
+  ).then((data) => {
+    // Draw the map
+    map
+      .append("g")
+      .selectAll("path")
+      .data(data.features)
+      .join("path")
+      .attr("d", path)
+      .attr("fill", "white");
+
+    map
+      .selectAll(".pin")
+      .data(positions)
+      .enter()
+      .append("circle", ".pin")
+      .attr("r", 10)
+      .attr("transform", function (d) {
+        return "translate(" + projection([d.lon, d.lat]) + ")";
+      })
+      .attr("fill", "red");
+  });
+</script>
