@@ -1,0 +1,167 @@
+---
+
+
+---
+
+<div id="bubble"></div>
+
+<style>
+    
+</style>
+
+<script>
+import * as d3 from "d3";
+import { select } from "d3-selection";
+import {transition } from "d3-transition";
+
+//Chargement données
+d3.csv("/assets/mission_launches.csv").then (function (data) {
+  //console.log(data);
+
+data.forEach(d => {
+  d.Date = d.Date.slice(11,16)
+  d.Mission_Status = d.Mission_Status === "Success" ? "Success" : "Failure";
+  
+});
+
+// Calcul du nombre de lancements par année et par compagnie
+const countByYear = d3.rollup(data, v => {
+        const countByOrganisation = d3.rollup(v, l => l.length, d => d.Organisation);
+        return Array.from(countByOrganisation, ([name, count]) => ({ name, count }));
+    }, d => d.Date.slice(-4));
+
+    // Préparation des données pour le graphique
+    const graphData = Array.from(countByYear, ([year, organisations]) => ({
+        year,
+        organisations: organisations.map(({ name, count }) => ({
+            name,
+            count,
+            successCount: data.filter(d => d.Date.slice(-4) === year && d.Organisation === name && d.Mission_Status === "Success").length,
+            failureCount: data.filter(d => d.Date.slice(-4) === year && d.Organisation === name && d.Mission_Status === "Failure").length
+        }))
+    }));
+
+    // Appeler la fonction updateChart avec les données initiales
+    updateChart("1957", graphData);
+
+ 
+ //console.log(graphData);
+    
+
+    select("#yearSlider").on("input", function() {
+    
+    updateChart(this.value, graphData);
+    
+  });
+});
+
+function updateChart (year, graphData) {
+
+    const yearData = graphData.find(d => d.year === year);
+    if (!yearData) return;
+    console.log(yearData);
+
+    radius.domain([0, d3.max(yearData.organisations, d => d.count)]);
+    
+    svg.selectAll("*").remove();
+
+    const simulation = d3.forceSimulation(yearData.organisations)
+        .force("charge", d3.forceManyBody().strength(75))
+        .force("center", d3.forceCenter(svg.attr("width") / 2, svg.attr("height") / 2))
+        .force("collision", d3.forceCollide().radius(d => radius(d.count)))
+        .on("tick", ticked);
+
+        const colorScale = d3.scaleLinear()
+              .domain([0, 1]) 
+              .range(["red", "green"]); 
+
+    function ticked() {
+        const bubbles = svg.selectAll(".bubble")
+            .data(yearData.organisations, d => d.name)
+            .join(enter => {
+                const g = enter.append("g").attr("class", "bubble");
+                g.append("circle")
+                    .style("fill", d => colorScale(d.successCount / d.count))
+                    .attr("r", d => radius(d.count))
+                    .attr("cx", (d, i) => i * 60)
+                    .attr("cy", (d, i) => -radius(d.count));
+                   
+
+                g.append("text")
+                    .attr("text-anchor", "middle")
+                    .style("fill", "#fff")
+                    //.style("font-size", "12px");
+                return g;
+
+            }); 
+            
+            bubbles.select("circle")
+            .transition() 
+            .duration(750) 
+            .style("fill", d => colorScale(d.successCount / d.count)); 
+
+            
+        const textSizeScale = d3.scaleLinear()
+              .domain([0, d3.max(yearData.organisations, d => d.count)])
+              .range([8, 16]);
+        
+        bubbles.select("circle")
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+            .attr("r", d => radius(d.count));
+           
+
+        bubbles.select("text")
+            .attr("x", d => d.x)
+            .attr("y", d => d.y)
+            .attr("dy", "0.35em")
+            .attr("font-size", d => textSizeScale(d.count))
+            .text(d => `${d.name} :     ${d.count}`)    
+
+    }   
+}
+
+
+const margin = { top: 400, right: 50, bottom: 50, left: 600 };
+
+select("#bubble").append("div").attr("id", "chart");
+
+
+let svg = select("#chart")
+	.append("svg")
+	.attr("id", "bulle")
+	.attr("width", "1200px")
+	.attr("height", "800px")
+  
+	.append("g")
+	.attr("transform", "translate("+ margin.left + "," + margin.top +")");
+
+
+  select("#chart")
+  .append("div")
+  .append("input")
+  .attr("type", "range")
+  .attr("id", "yearSlider")
+  .attr("min", 1957)
+  .attr("max", 2020)
+  .attr("step", 1)
+  .style("width", "50%")
+  .style("margin", "0 0 5% 25%")
+
+  
+  select("#chart")
+    .append("h1")
+    .text("Launches from campanies by year")
+    .style("text-align", "center")
+
+  select("#chart")
+    .append("div")
+    .attr("id", "buttons")
+    .style("display", "flex")
+    .style("justify-content", "center")
+    .style("margin", "0 0 5% 0")
+  
+
+const radius = d3.scaleSqrt().range([10, 100]);
+
+</script>
