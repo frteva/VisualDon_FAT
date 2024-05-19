@@ -11,7 +11,7 @@
     align-items: center;
   }
 
-  :global(svg) {
+  #container2 :global(svg) {
     height: auto;
     width: 100%;
     /* background-color: rgba(141, 196, 235, 0.5); */
@@ -29,10 +29,6 @@
   const heuresLancements = await d3.json("/assets/data/heures_lancements.json");
   const missionLaunches = await d3.json("assets/data/mission_launches.json");
   const positions = await d3.json("assets/data/positions.json");
-
-  console.log(heuresLancements);
-  console.log(missionLaunches);
-  console.log(positions);
 
   const margin = 40,
     width = 900,

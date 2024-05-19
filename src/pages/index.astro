@@ -49,19 +49,20 @@ import EndStats from "../components/EndStats.astro";
         <main>
             <section>
                 <div class="graph">
+                    <h1>Number of launches by companies since 1957</h1>
                     <BubbleChart />
                 </div>
             </section>
             <section>
                 <div class="graph">
-                    <DepartureTime />
                     <h1>Mission Launches by Hour of the Day (24h)</h1>
+                    <DepartureTime />
                 </div>
             </section>
             <section>
                 <div class="graph">
-                    <Map />
                     <h1>World Distribution of Mission Launches</h1>
+                    <Map />
                 </div>
             </section>
             <section>
@@ -165,6 +166,7 @@ import EndStats from "../components/EndStats.astro";
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 1em;
     }
 
     .rocket__container {
@@ -332,7 +334,7 @@ import EndStats from "../components/EndStats.astro";
             scrollTrigger: {
                 trigger: section,
                 start: "top center",
-                end: "30% center",
+                end: "50% center",
                 // scrub: true,
                 // markers: true,
                 onEnter: () => {
@@ -374,7 +376,4 @@ import EndStats from "../components/EndStats.astro";
             },
         });
     });
-
-
-
 </script>

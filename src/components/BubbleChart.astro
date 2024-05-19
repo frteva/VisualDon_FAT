@@ -6,13 +6,20 @@
 <div id="bubble"></div>
 
 <style>
+    #bubble :global(svg) > :global(g) {
+        transform: translate(50%, 50%);
+    }
+
+    :global(#bulle) {
+        width: 100%;
+        height: 70vh;
+    }
     
 </style>
 
 <script>
 import * as d3 from "d3";
 import { select } from "d3-selection";
-import {transition } from "d3-transition";
 
 //Chargement données
 d3.csv("/assets/mission_launches.csv").then (function (data) {
@@ -44,22 +51,17 @@ const countByYear = d3.rollup(data, v => {
     // Appeler la fonction updateChart avec les données initiales
     updateChart("1957", graphData);
 
- 
- //console.log(graphData);
-    
-
     select("#yearSlider").on("input", function() {
-    
-    updateChart(this.value, graphData);
-    
-  });
+        updateChart(this.value, graphData);
+        select("#date").text(this.value);
+    });
 });
 
 function updateChart (year, graphData) {
 
     const yearData = graphData.find(d => d.year === year);
     if (!yearData) return;
-    console.log(yearData);
+    // console.log(yearData);
 
     radius.domain([0, d3.max(yearData.organisations, d => d.count)]);
     
@@ -96,8 +98,8 @@ function updateChart (year, graphData) {
             }); 
             
             bubbles.select("circle")
-            .transition() 
-            .duration(750) 
+            // .transition() 
+            // .duration(750) 
             .style("fill", d => colorScale(d.successCount / d.count)); 
 
             
@@ -134,7 +136,6 @@ let svg = select("#chart")
 	.attr("height", "800px")
   
 	.append("g")
-	.attr("transform", "translate("+ margin.left + "," + margin.top +")");
 
 
   select("#chart")
@@ -146,20 +147,14 @@ let svg = select("#chart")
   .attr("max", 2020)
   .attr("step", 1)
   .style("width", "50%")
-  .style("margin", "0 0 5% 25%")
+  .style("margin", "0 0 0 25%")
 
   
   select("#chart")
-    .append("h1")
-    .text("Launches from campanies by year")
+    .append("h3")
+    .attr("id", "date")
+    .text("1957")
     .style("text-align", "center")
-
-  select("#chart")
-    .append("div")
-    .attr("id", "buttons")
-    .style("display", "flex")
-    .style("justify-content", "center")
-    .style("margin", "0 0 5% 0")
   
 
 const radius = d3.scaleSqrt().range([10, 100]);
