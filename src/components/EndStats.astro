@@ -1,0 +1,94 @@
+---
+---
+
+<div>
+    <div class="text">
+        <p>Since the Soviet Union launched Sputnik 1 in 1957, space missions have revolutionized our understanding of the cosmos. Today, space missions are conducted by a variety of organizations, including NASA, the European Space Agency, and private companies like SpaceX. Space missions are conducted for a variety of purposes, including scientific research, exploration, and commercial activities.</p>
+    </div>
+    <div class="stats">
+        <div class="stat">
+            <p class="number" id="mission_number">30</p>
+            <h3>Space Missions</h3>
+        </div>
+        <div class="stat">
+            <p class="number" id="orga_number">30</p>
+            <h3>Organizations</h3>
+        </div>
+        <div class="stat">
+            <p class="number" id="location_number">30</p>
+            <h3>Locations</h3>
+        </div>
+    </div>
+    <p class="updated">Updated Aug 07, 2020</p>
+</div>
+
+<style>
+    div {
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .text {
+        margin-bottom: 20px;
+        max-width: 1000px;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .number {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .stat {
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    h3 {
+        margin: 0;
+        font-weight: 400;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .updated {
+        font-size: 0.8em;
+    }
+</style>
+
+<script>
+    import * as d3 from "d3";
+    const missionLaunches = await d3.json("assets/data/mission_launches.json");
+
+    // Number of missions
+    const missionNumber = missionLaunches.length;
+    document.getElementById("mission_number").innerText = missionNumber;
+
+    // Number of organizations
+    const organisation = new Set();
+    missionLaunches.forEach((mission) => {
+        organisation.add(mission.Organisation[0]);
+    });
+
+    const orgaNumber = organisation.size;
+    document.getElementById("orga_number").innerText = orgaNumber;
+
+    // Number of locations
+    const location = new Set();
+    missionLaunches.forEach((mission) => {
+        location.add(mission.Location[0]);
+    });
+
+    const locationNumber = location.size;
+    document.getElementById("location_number").innerText = locationNumber;
+
+</script>

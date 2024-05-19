@@ -6,6 +6,7 @@ import BubbleChart from "../components/BubbleChart.astro";
 import TheHeader from "../components/TheHeader.astro";
 import TheTitle from "../components/TheTitle.astro";
 import TheFooter from "../components/TheFooter.astro";
+import EndStats from "../components/EndStats.astro";
 ---
 
 <html lang="en">
@@ -63,6 +64,12 @@ import TheFooter from "../components/TheFooter.astro";
                     <h1>World Distribution of Mission Launches</h1>
                 </div>
             </section>
+            <section>
+                <div class="graph">
+                    <EndStats />
+                </div>
+            </section>
+
         </main>
         <TheFooter />
     </body>
