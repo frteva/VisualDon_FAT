@@ -4,7 +4,7 @@
 
 <div id="container1">
   <div class="btn-container">
-    <button class="button-27" role="button" id="buttonUTC">UTC</button>
+    <button class="button-27 active" role="button" id="buttonUTC">UTC</button>
     <button class="button-27" role="button" id="buttonGMT">GMT</button>
   </div>
   <div class="graph2"></div>
@@ -16,11 +16,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
   }
   #container1 :global(svg) {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     /* background-color: rgba(141, 196, 235, 0.5); */
   }
 
@@ -31,34 +31,21 @@
   .btn-container {
     display: flex;
     flex-flow: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   /* CSS */
   .button-27 {
     appearance: none;
-    background-color: #e2eafa;
-    border: 2px solid #1a1a1a;
+    background-color: #1a1a1a;
+    border: 0;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #1a1a1a;
+    color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family:
-      Roobert,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Helvetica,
-      Arial,
-      sans-serif,
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    font-size: 16px;
     font-weight: 600;
-    line-height: normal;
-    margin-left: 1rem;
-    margin-right: 1rem;
     min-height: 48px;
     min-width: 96px;
     outline: none;
@@ -73,18 +60,14 @@
     will-change: transform;
   }
 
-  .button-27:disabled {
-    pointer-events: none;
-  }
-
   .button-27:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
 
-  .button-27:active {
-    box-shadow: none;
-    transform: translateY(0);
+  .button-27.active {
+    background-color:#e2eafa;
+    color: #000;
   }
 
   :global(.xAxis) {
@@ -139,9 +122,15 @@
     tabHours(heuresLancements);
     document.querySelector(".graph2").innerHTML = "";
     dataDisplay();
+    document.querySelector("#buttonUTC").classList.add("active");
+    document.querySelector("#buttonGMT").classList.remove("active");
   };
 
   const GMT = () => {
+
+    document.querySelector("#buttonGMT").classList.add("active");
+    document.querySelector("#buttonUTC").classList.remove("active");
+
     heuresLancementsGMT = [];
     heuresLancements.forEach((e) => {
       positions.forEach((el) => {
